@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# SQLite cache (local only, JSONL is source of truth)
+.beads/beads.db
+.beads/beads.db-journal
+.beads/beads.db-wal
+.beads/beads.db-shm
+
+# Claude-flow local state
+.claude-flow/cache/
+.claude-flow/logs/
+.claude-flow/*.sock
+
+# Agent local state
+agents/.state/
+agents/*.pid
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/

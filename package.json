@@ -1,0 +1,33 @@
+{
+  "name": "beads-multi-agent-demo",
+  "version": "1.0.0",
+  "description": "Multi-agent collaboration system using Claude-Flow with Beads git-native persistence",
+  "type": "module",
+  "scripts": {
+    "setup": "npm run setup:claude-flow && npm run setup:beads",
+    "setup:claude-flow": "npx claude-flow@alpha init --force",
+    "setup:agentic": "npx agentic-flow@alpha init",
+    "setup:agentdb": "npx agentdb@alpha init",
+    "setup:vector": "npx ruvvector@alpha init",
+    "setup:beads": "node scripts/init-beads.js",
+    "start": "node scripts/orchestrator.js",
+    "start:architect": "node agents/architect.js",
+    "start:implementer": "node agents/implementer.js",
+    "start:reviewer": "node agents/reviewer.js",
+    "demo": "node scripts/demo-usecase.js",
+    "sync": "node scripts/sync-agents.js",
+    "status": "node scripts/status.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "nanoid": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
