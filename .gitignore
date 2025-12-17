@@ -1,6 +1,18 @@
 # Dependencies
 node_modules/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
 # SQLite cache (local only, JSONL is source of truth)
 .beads/beads.db
 .beads/beads.db-journal
